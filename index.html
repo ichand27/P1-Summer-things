@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <title>My Summer Wishes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-</head>
-
 <body>
+    <header>
+        <h1>My Summer Wishes</h1>
+    </header>
+
+  
+    <section id="page1" class="page">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username">
+        <button onclick="goToPage2()">Click to Continue</button>
+    </section>
 
 
-<div id="header">
+    <section id="page2" class="page" style="display:none;">
+        <h2>Welcome, <span id="displayName"></span>!</h2>
 
-  <header>
- <h1 class="head">Summer Wishes</h1>
- <h6 class="clickTxt">-----click to continue-----</h6>
- </header>
- </div>
+        <div class="input-section">
+            <input type="text" id="wishInput" placeholder="Add a new summer wish">
+            <select id="categorySelect">
+                <option value="All">All</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Relaxation">Relaxation</option>
+                <option value="Learning">Learning</option>
+            </select>
+            <button onclick="addWish()">Add Wish</button>
+        </div>
 
-<div id="userInput">
-       
-      <div id="inputNm">
+        <div id="wishContainer" class="wish-container"></div>
+    </section>
 
-            <label for="user">Enter your name:</label>
-            <input type="text" id="user">
+    <footer>
+        Created by [Your Name] &copy; <span id="year"></span>
+    </footer>
 
-      </div>
-          
-            <p class="welcome">Welcome, <span id="displayName">Guest</span>!</p>
-          
-</div>
-
-
-
-
-<footer>
-      <h5>&copy; 2025 Isis Zinnia Chand. All rights reserved.</h5>
-</footer>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
